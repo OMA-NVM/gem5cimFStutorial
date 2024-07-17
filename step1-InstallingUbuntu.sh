@@ -32,7 +32,7 @@ eval "$DOCKER_RUN_CMD qemu-img create -f raw /ISO/disk.raw 10G"
 
 xhost + # allowing X11 access to our docker container
 
-echo -e "$BOLD_GREEN start installing your custom ubuntu... $main_dir $TEXT_RST"
+echo -e "$BOLD_GREEN start installing your custom ubuntu... $TEXT_RST"
 
 eval "$DOCKER_RUN_CMD \
 		qemu-system-x86_64 -enable-kvm -cpu host \
