@@ -1,3 +1,4 @@
 images/*.raw
 images/*.iso
 
+gem5/
