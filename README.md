@@ -72,7 +72,7 @@ sudo ./OurInit.sh
 
 Press the **enter key** and `y` + **enter key** to compile gem5's `scons` file if asked (this might take ~20 minutes for the first time to compile).
 
-After you see something like `src/dev/x86/pc.cc:117: warn: Don't know what interrupt to clear for console.`
+After you see something like `src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.`
 in your terminal, open another terminal instance and run:
 
 ```sh
@@ -103,4 +103,25 @@ sum result (should be 21): 21
 m5 which shutdowns gem5...
 ```
 and exits the simulation because of `m5_exit(0ul);` line in our code.
+
+
+## Part3: gem5 Example No.2
+> Compiling and running a simple **Kernel module for direct physical memory access** example inside gem5 and how to access it from a **user-level** application
+
+### Run `step3-testingWithGem5.sh -s`
+
+After you see something like:  
+`src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.`
+in your terminal, open another terminal instance and run:
+
+```sh
+docker exec -it qemu-gem5-running-container /GEM5/util/term/m5term 127.0.0.1 3456
+```
+Now you are simulating your Ubuntu with gem5.
+
+**This time**, move to `~/test2/` directory and run:
+```sh
+sudo ./compile_and_run.sh
+```
+wait for it to finish.
 
