@@ -31,3 +31,32 @@ Please try:
 
 
 
+### Run `step2.PostInstallation.sh`
+
+Wait a few seconds,
+Then connect with `ssh -p 5555 ali@localhost` from your local PC.
+The default pass is `1234`. Confirm adding the ssh-key with `yes` and press enter.
+
+if you saw:
+```sh
+ssh -p 5555 ali@localhost
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+...
+```
+then run the printed command in the message, staring with:
+`ssh-keygen ... `
+and after that run `ssh ...`
+
+---
+
+Run the following commands after connection:
+```sh
+sudo mkdir /mnt/shared_folder
+sudo mount -t 9p -o trans=virtio,version=9p2000.L hostshare /mnt/shared_folder
+cd /mnt/shared_folder
+ls
+sudo chmod +x OurInit.sh
+sudo ./OurInit.sh
+```
