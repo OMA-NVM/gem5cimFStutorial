@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e # to stop execution if there is an error
 
 BOLD_GREEN="\t\e[1;32m==> "
 TEXT_RST=" <==\e[0m"

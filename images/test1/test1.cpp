@@ -14,7 +14,7 @@ Compile with:
 
     sudo g++ test1.cpp  /usr/local/lib/libm5.a  -o test1.exe
 
-To switch from KVM to TIMING, you can run:
+To switch from KVM to TIMING (or O3), you can run:
 
     m5 exit
 
