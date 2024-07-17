@@ -27,7 +27,7 @@ Please try:
 - Deselect ****LVM disk** in the partition page
 - Select **openSSH...**
 
-Please watch [](./misc/Step1-tutorial.webm) for this step.
+> Please watch [misc/Step1-tutorial.webm](./misc/Step1-tutorial.webm) for this step.
 
 
 
@@ -61,4 +61,4 @@ sudo chmod +x OurInit.sh
 sudo ./OurInit.sh
 ```
 
-Please watch [](./misc/Step2-tutorial.webm) for this step.
+> Please watch [misc/Step1-tutorial.webm](./misc/Step2-tutorial.webm) for this step.
