@@ -1,5 +1,5 @@
 /*
-Test m5 functionallity and access through your app
+Test m5 functionality and access through your app
 
     ** note that if you run this app with KVM cpu it would show:
         ____________________________________________________
@@ -12,7 +12,7 @@ So, first switch to TIMING cpu then run the compiled app.
 ---------
 Compile with:
 
-    g++ test1.cpp  /usr/local/lib/libm5.a  -o test1.exe
+    sudo g++ test1.cpp  /usr/local/lib/libm5.a  -o test1.exe
 
 To switch from KVM to TIMING, you can run:
 
