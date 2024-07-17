@@ -28,6 +28,6 @@ Please try:
 - Select **openSSH...**
 
 > Please watch `misc/Step1-tutorial.webm` for installation steps:
-<video src="./misc/Step1-tutorial.webm" width="1080" controls></video>
+
 
 
