@@ -17,6 +17,9 @@ This is part of a tutorial: gem5 + x86 ubuntu Full System + basic CiM module + b
 
 ## Part1: Preparation
 
+You can skip **Part1** (Step 1 and Step 2) by running `./skip-Steps1and2.sh` script,
+which downloads our prebuild `disk.raw` file based on Step 1 and Step 2, in the following.
+
 ### Run `step1.InstallingUbuntu.sh`
 
 Install **Ubuntu Server Minimal** on a disk.
