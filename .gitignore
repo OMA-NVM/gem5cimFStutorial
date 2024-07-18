@@ -1,4 +1,4 @@
-images/*.raw
+images/*.raw*
 images/*.iso
 
 gem5/
