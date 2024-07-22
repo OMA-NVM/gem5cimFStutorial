@@ -57,8 +57,6 @@ main()
         "XOR result: 0x%08x (should be 0x%08x)\n", *dst,
         0xFF001234u ^ 0xAFA00FFFu); // read dest
 
-    *cmd = 0xCCCCCCC0u; // write another dummy command
-    *cmd = 0xCCCCCCC1u; // write another dummy command
 
     munmap(mapped_mem, RESERVED_MEM_SIZE);
     close(fd);
