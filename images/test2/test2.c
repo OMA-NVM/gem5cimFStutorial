@@ -44,17 +44,17 @@ main()
 
     *cmd = 0xAAAAAAAAu; // write AND
     printf(
-        "AND result: 0x%08x (should be 0x%08x)\n", *dst,
+        "AND result:\t0x%08x\t(should be 0x%08x)\n", *dst,
         0xFF001234u & 0xAFA00FFFu); // read dest
 
     *cmd = 0xBBBBBBBBu; // write OR
     printf(
-        "OR result: 0x%08x (should be 0x%08x)\n", *dst,
+        "OR result:\t0x%08x\t(should be 0x%08x)\n", *dst,
         0xFF001234u | 0xAFA00FFFu); // read dest
 
     *cmd = 0xCCCCCCCCu; // write XOR
     printf(
-        "XOR result: 0x%08x (should be 0x%08x)\n", *dst,
+        "XOR result:\t0x%08x\t(should be 0x%08x)\n", *dst,
         0xFF001234u ^ 0xAFA00FFFu); // read dest
 
 
