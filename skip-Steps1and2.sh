@@ -7,7 +7,7 @@ TEXT_RST=" \e[1;32m <==\e[0m"
 
 main_dir=$(pwd)
 
-echo -e "$BOLD_GREEN building docker image $BOLD_YELLOW disk.raw  $TEXT_RST"
+echo -e "$BOLD_GREEN building docker image $BOLD_YELLOW qemu-gem5-image  $TEXT_RST"
 docker build -t qemu-gem5-image .
 
 echo -e "$BOLD_GREEN downloading our prebuild $BOLD_YELLOW disk.raw  $TEXT_RST"
