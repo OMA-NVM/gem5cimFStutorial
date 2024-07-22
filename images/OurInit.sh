@@ -78,6 +78,8 @@ cp -r ./test1 /home/ali
 cp -r ./test2 /home/ali
 sudo chmod +x /home/ali/test2/compile_and_run.sh
 
+history -c
+
 echo -e "\n\t$BOLD_GREEN *** DONE *** $TEXT_RST\n\n"
 
 sudo shutdown -P now
