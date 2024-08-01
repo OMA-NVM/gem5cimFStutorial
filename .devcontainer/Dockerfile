@@ -2,8 +2,7 @@
 ### full system compute in memory framework in gem5 from scratch.
 ### Base docker file with QEMU and gem5 dependencies
 
-FROM ubuntu:latest
-
+FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 # Install gem5 dependencies
 RUN apt -y update && apt -y upgrade && \
@@ -13,7 +12,7 @@ RUN apt -y update && apt -y upgrade && \
     libpng-dev libelf-dev pkg-config pip python3-venv black \
     telnet
 
-RUN pip install --break-system-packages mypy pre-commit
+# RUN pip install --break-system-packages mypy pre-commit
 
 # Install QEMU-KVM dependencies
 RUN apt update && \
