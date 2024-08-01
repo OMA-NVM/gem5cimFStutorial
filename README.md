@@ -11,9 +11,8 @@ This is part of a tutorial: gem5 + x86 ubuntu Full System + basic CiM module + b
 2- Install **KVM** packages:
 - follow instructions on https://help.ubuntu.com/community/KVM/Installation
 
-3- Install **docker** and add it to `sudo` group:
-- follow instructions on https://docs.docker.com/engine/install/ubuntu/
-- follow instructions on https://docs.docker.com/engine/install/linux-postinstall/
+3- Install **vscode devcontainer** extensions:
+- follow instructions on https://code.visualstudio.com/docs/devcontainers/containers#_installation
 
 ## Part1: Preparation
 
@@ -37,21 +36,8 @@ Please try:
 ### Run `step2.PostInstallation.sh`
 
 Wait a few seconds,
-Then connect with `ssh -p 5555 ali@localhost` from your local PC.
+Then connect with `ssh -p 5555 ali@localhost` from your vscode devcontainer terminal.
 The default pass is `1234`. Confirm adding the ssh-key with `yes` and press enter.
-
-if you saw:
-```sh
-ssh -p 5555 ali@localhost
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-...
-```
-then run the printed command in the message, staring with:
-`ssh-keygen ... `
-and after that run `ssh ...`
-
 ---
 
 Run the following commands after connection:
@@ -64,7 +50,7 @@ sudo chmod +x OurInit.sh
 sudo ./OurInit.sh
 ```
 
-> Please watch [misc/Step1-tutorial.webm](./misc/Step2-tutorial.webm) for this step.
+> Please watch [misc/Step2-tutorial.webm](./misc/Step2-tutorial.webm) for this step.
 
 
 
@@ -76,10 +62,10 @@ sudo ./OurInit.sh
 Press the **enter key** and `y` + **enter key** to compile gem5's `scons` file if asked (this might take ~20 minutes for the first time to compile).
 
 After you see something like `src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.`
-in your terminal, open another terminal instance and run:
+in your vscode devcontainer terminal, open another terminal instance and run: (change the gem5 path if needed)
 
 ```sh
-docker exec -it qemu-gem5-running-container /GEM5/util/term/m5term 127.0.0.1 3456
+./gem5/util/term/m5term 127.0.0.1 3456
 ```
 Now you are simulating your Ubuntu with gem5.
 
@@ -118,7 +104,7 @@ After you see something like:
 in your terminal, open another terminal instance and run:
 
 ```sh
-docker exec -it qemu-gem5-running-container /GEM5/util/term/m5term 127.0.0.1 3456
+./gem5/util/term/m5term 127.0.0.1 3456
 ```
 Now you are simulating your Ubuntu with gem5.
 
