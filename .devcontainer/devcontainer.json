@@ -15,5 +15,12 @@
 	"remoteUser": "vscode",
 	"features": {
 		"ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mhutchie.git-graph"
+			]
+		}
 	}
 }

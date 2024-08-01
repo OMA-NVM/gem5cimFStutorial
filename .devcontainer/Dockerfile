@@ -12,7 +12,7 @@ RUN apt -y update && apt -y upgrade && \
     libpng-dev libelf-dev pkg-config pip python3-venv black \
     telnet
 
-# RUN pip install --break-system-packages mypy pre-commit
+RUN pip install mypy pre-commit
 
 # Install QEMU-KVM dependencies
 RUN apt update && \
@@ -28,6 +28,7 @@ RUN apt update && \
 
 RUN apt clean
 
+RUN echo "set completion-ignore-case on" >> /etc/inputrc
 
 
 
