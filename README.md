@@ -4,7 +4,7 @@ This is part of a tutorial: gem5 + x86 ubuntu Full System + basic CiM module + b
 **gem5** + **qemu** tutorial on building a full-system compute-in-memory framework from scratch in gem5.
 
 
-## Part0: Perquisites on your computer
+## Part0: Prerequisites on your computer
 
 1- **KVM** supported cpu
 
