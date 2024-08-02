@@ -33,12 +33,12 @@ Please try:
 
 
 
-### Run `step2.PostInstallation.sh`
+### Run `step2.PostInstallation.sh`    
 
 Wait a few seconds,
 Then connect with `ssh -p 5555 ali@localhost` from your vscode devcontainer terminal.
-The default pass is `1234`. Confirm adding the ssh-key with `yes` and press enter.
----
+The default pass is `1234` (user: ali). Confirm adding the ssh-key with `yes` and press enter if needed.
+
 
 Run the following commands after connection:
 ```sh
@@ -101,7 +101,7 @@ and exits the simulation because of `m5_exit(0ul);` line in our code.
 
 After you see something like:  
 `src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.`
-in your terminal, open another terminal instance and run:
+in your terminal, open another terminal instance and run: (use correct gem5 path)
 
 ```sh
 ./gem5/util/term/m5term 127.0.0.1 3456
