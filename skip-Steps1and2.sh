@@ -5,7 +5,7 @@ BOLD_GREEN="\t\e[1;32m==> "
 BOLD_YELLOW="\e[1;33m"
 TEXT_RST=" \e[1;32m <==\e[0m"
 
-main_dir="$(pwd)"
+main_dir="$(pwd)/cdnc"
 
 
 echo -e "$BOLD_GREEN downloading our prebuild $BOLD_YELLOW disk.raw  $TEXT_RST"

@@ -3,7 +3,7 @@
 BOLD_GREEN="\t\e[1;32m==> "
 TEXT_RST=" <==\e[0m"
 
-main_dir="$(pwd)"
+main_dir="$(pwd)/simulator"
 
 ##############################################################################
 
@@ -12,7 +12,7 @@ echo -e "$BOLD_GREEN step3: \t from $main_dir $TEXT_RST"
 if [ "$1" != "-s" ]; then		# if `-s` is passed then skip these commands
 	echo -e "$BOLD_GREEN Cloning our gem5 $TEXT_RST"
 
-	git clone --branch=cimFS https://github.com/ali10129/gem5FScim.git gem5
+	# git clone --branch=cimFS https://github.com/ali10129/gem5FScim.git gem5
 
 	echo -e "$BOLD_GREEN Compiling ./build/X86/gem5.opt, ./util/m5, ./util/m5term $TEXT_RST"
 	echo -e "$BOLD_GREEN Conform if needed by pressing enter or y and enter. $TEXT_RST"
