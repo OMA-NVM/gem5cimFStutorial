@@ -18,10 +18,10 @@ if [ "$1" != "-s" ]; then		# if `-s` is passed then skip these commands
 	echo -e "$BOLD_GREEN Conform if needed by pressing enter or y and enter. $TEXT_RST"
 
 	cd "$main_dir/gem5"
-	scons -j$(nproc) ./build/X86/gem5.opt
+	python3 `which scons` -j$(nproc) ./build/X86/gem5.opt
 
 	cd "$main_dir/gem5/util/m5"
-	scons build/x86/out/m5
+	python3 `which scons` build/x86/out/m5
 
 	cd "$main_dir/gem5/util/term"
 	gcc -o m5term term.c
