@@ -15,7 +15,7 @@ if [ "$1" != "-s" ]; then		# if `-s` is passed then skip these commands
 	echo -e "$BOLD_GREEN Conform if needed by pressing enter or y and enter. $TEXT_RST"
 
 	cd "$main_dir/simulator/gem5"
-	git checkout CDNCcimFS				#comment this after merge @todo
+	# git checkout CDNCcimFS				#comment this after merge @todo
 	python3 `which scons` -j$(nproc) CDNCcimFS=1 ./build/X86/gem5.opt
 
 	cd "$main_dir/simulator/gem5/util/m5"
