@@ -5,11 +5,11 @@ BOLD_GREEN="\t\e[1;32m==> "
 BOLD_YELLOW="\e[1;33m"
 TEXT_RST=" \e[1;32m <==\e[0m"
 
-main_dir="$(pwd)/cdnc"
+main_dir="$(pwd)"  # run script inside NVM_SIMULATION/
 
 
 echo -e "$BOLD_GREEN downloading our prebuild $BOLD_YELLOW disk.raw  $TEXT_RST"
-cd "$main_dir/images"
+cd "$main_dir/cdnc/images"
 
 wget -nc https://bwsyncandshare.kit.edu/s/ZJ4TYR7nZtJWkYP/download/disk.raw.tar.gz
 

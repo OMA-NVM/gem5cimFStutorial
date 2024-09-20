@@ -3,7 +3,7 @@
 BOLD_GREEN="\t\e[1;32m==> "
 TEXT_RST=" <==\e[0m"
 
-main_dir="$(pwd)"
+main_dir="$(pwd)"		# run script inside NVM_SIMULATION/
 
 ##############################################################################
 
@@ -32,7 +32,7 @@ echo -e "$BOLD_GREEN Running OurConfig.py $TEXT_RST"
 cd "$main_dir/simulator/gem5"
 ./build/X86/gem5.opt --debug-flags=CIMDBG ./configs/CDNCcimFS/OurConfig.py
 cd "$main_dir"
-### in another vscode terminal instance, run:
+### in another vscode terminal instance, move to NVM_SIMULATION/ and run:
 ##> 		./simulator/gem5/util/term/m5term 127.0.0.1 3456
 
 echo -e "$BOLD_GREEN *** DONE *** $TEXT_RST"
