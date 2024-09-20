@@ -16,7 +16,7 @@ if [ "$1" == "-c" ]; then
 
 	cd "$main_dir/simulator/gem5"
 	# git checkout CDNCcimFS				#comment this after merge @todo
-	python3 `which scons` -j$(nproc) CDNCcimFS=1 ./build/X86/gem5.opt
+	yes | python3 `which scons` -j$(nproc) CDNCcimFS=1 ./build/X86/gem5.opt
 
 	cd "$main_dir/simulator/gem5/util/m5"
 	python3 `which scons` build/x86/out/m5
