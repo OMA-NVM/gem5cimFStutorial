@@ -9,7 +9,7 @@ main_dir="$(pwd)"		# run script inside NVM_SIMULATION/
 
 echo -e "$BOLD_GREEN step3: \t from $main_dir $TEXT_RST"
 
-if [ "$1" != "-s" ]; then		# if `-s` is passed then skip these commands
+if [ "$1" == "-c" ]; then	
 
 	echo -e "$BOLD_GREEN Compiling ./build/X86/gem5.opt, ./util/m5, ./util/m5term $TEXT_RST"
 	echo -e "$BOLD_GREEN Conform if needed by pressing enter or y and enter. $TEXT_RST"
@@ -27,12 +27,15 @@ if [ "$1" != "-s" ]; then		# if `-s` is passed then skip these commands
 	cd "$main_dir"
 fi
 
-echo -e "$BOLD_GREEN Running OurConfig.py $TEXT_RST"
+if [ "$1" != "-c" ]; then	
+	echo -e "$BOLD_GREEN Running OurConfig.py $TEXT_RST"
 
-cd "$main_dir/simulator/gem5"
-./build/X86/gem5.opt --debug-flags=CIMDBG ./configs/CDNCcimFS/OurConfig.py
-cd "$main_dir"
-### in another vscode terminal instance, move to NVM_SIMULATION/ and run:
-##> 		./simulator/gem5/util/term/m5term 127.0.0.1 3456
+	cd "$main_dir/simulator/gem5"
+	./build/X86/gem5.opt --debug-flags=CIMDBG ./configs/CDNCcimFS/OurConfig.py
+	cd "$main_dir"
+	### in another vscode terminal instance, move to NVM_SIMULATION/ and run:
+	##> 		./simulator/gem5/util/term/m5term 127.0.0.1 3456
 
-echo -e "$BOLD_GREEN *** DONE *** $TEXT_RST"
+	echo -e "$BOLD_GREEN *** DONE *** $TEXT_RST"
+
+fi
