@@ -16,10 +16,10 @@ This is part of a tutorial: gem5 + x86 ubuntu Full System + basic CiM module + b
 
 ## Part1: Preparation
 
-You can skip **Part1** (Step 1 and Step 2) by running `./skip-Steps1and2.sh` script,
+You can skip **Part1** (Step 1 and Step 2) by running `./skip-Steps1and2.sh` script (*From vscode > Terminal > Rum Task*),
 which downloads our prebuild `disk.raw` file based on Step 1 and Step 2, in the following.
 
-### Run `step1.InstallingUbuntu.sh`
+### Run `step1.InstallingUbuntu.sh` (*From vscode > Terminal > Rum Task*)
 
 Install **Ubuntu Server Minimal** on a disk.
 
@@ -33,7 +33,7 @@ Please try:
 
 
 
-### Run `step2.PostInstallation.sh`    
+### Run `step2.PostInstallation.sh`     (*From vscode > Terminal > Rum Task*)
 
 Wait a few seconds,
 Then connect with `ssh -p 5555 ali@localhost` from your vscode devcontainer terminal.
@@ -57,7 +57,7 @@ sudo ./OurInit.sh
 ## Part2: gem5 Example No.1
 > Compiling and running a simple **hello world** application inside gem5 Full-System mode
 
-### Run `step3-testingWithGem5.sh`
+### Run `step3-testingWithGem5.sh` (*From vscode > Terminal > Rum Task*)
 
 Press the **enter key** and `y` + **enter key** to compile gem5's `scons` file if asked (this might take ~20 minutes for the first time to compile).
 
@@ -65,7 +65,7 @@ After you see something like `src/dev/ps2/mouse.cc:153: warn: Unknown mouse comm
 in your vscode devcontainer terminal, open another terminal instance and run: (change the gem5 path if needed)
 
 ```sh
-./gem5/util/term/m5term 127.0.0.1 3456
+./simulator/gem5/util/term/m5term 127.0.0.1 3456
 ```
 Now you are simulating your Ubuntu with gem5.
 
@@ -97,14 +97,14 @@ and exits the simulation because of `m5_exit(0ul);` line in our code.
 ## Part3: gem5 Example No.2
 > Compiling and running a simple **Kernel module for direct physical memory access** example inside gem5 and how to access it from a **user-level** application
 
-### Run `step3-testingWithGem5.sh -s`
+### Run `step3-testingWithGem5.sh` (*From vscode > Terminal > Rum Task*)
 
 After you see something like:  
 `src/dev/ps2/mouse.cc:153: warn: Unknown mouse command 0x0.`
 in your terminal, open another terminal instance and run: (use correct gem5 path)
 
 ```sh
-./gem5/util/term/m5term 127.0.0.1 3456
+./simulator/gem5/util/term/m5term 127.0.0.1 3456
 ```
 Now you are simulating your Ubuntu with gem5.
 
